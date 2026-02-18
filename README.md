@@ -24,11 +24,5 @@ Cineclub includes modern security and a complete admin dashboard:
 ## Community
 Cineclub is a community-driven project. Ideas, bug reports, and contributions are welcome.
 
-## About the Author
-Cineclub is created by fmaxv60. The goal is to make it easier for friends to plan movie sessions and share opinions in one place.
-
-## Contributing
-Contributions are welcome. Feel free to open issues, suggest features, or submit pull requests.
-
 ## Contact
 Reach out on GitHub: https://github.com/Fmaxv60/Cineclub
