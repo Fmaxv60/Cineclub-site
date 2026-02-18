@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cineclub | Votre passion cinéma</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        cineBg: '#072824',
+                        cineCard: '#1B4F3E',
+                        cinePrimary: '#6CA55E',
+                        cineAccent: '#A9D066',
+                        cineMuted: '#3D7A52',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { background-color: #072824; font-family: 'Inter', sans-serif; }
+        .glass { background: rgba(27, 79, 62, 0.4); backdrop-filter: blur(10px); border: 1px solid rgba(108, 165, 94, 0.1); }
+        /* Animation subtile pour le scroll */
+        .nav-scrolled { background: rgba(7, 40, 36, 0.8); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(108, 165, 94, 0.2); }
+    </style>
+</head>
+<body class="text-white">
+
+    <nav id="navbar" class="fixed top-0 w-full z-50 transition-all duration-300 glass">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold text-cinePrimary tracking-tighter">Cineclub</div>
+            <div class="hidden md:flex gap-8 text-xs uppercase tracking-widest font-bold">
+                <a href="#preview" class="hover:text-cineAccent transition" data-key="nav_preview">Aperçu</a>
+                <a href="#features" class="hover:text-cineAccent transition" data-key="nav_features">Fonctionnalités</a>
+                <a href="#about" class="hover:text-cineAccent transition" data-key="nav_about">À propos</a>
+            </div>
+            <a href="https://github.com/Fmaxv60/Cineclub" target="_blank" class="bg-cinePrimary hover:bg-cineAccent text-cineBg px-5 py-2 rounded-full font-bold text-sm transition" data-key="nav_cta">Essayer la démo</a>
+        </div>
+    </nav>
+
+    <header class="relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-cinePrimary/10 blur-[120px] rounded-full"></div>
+        
+        <div class="max-w-7xl mx-auto px-6 w-full flex flex-col md:flex-row items-center relative z-10">
+            <div class="md:w-1/2 space-y-8 text-center md:text-left">
+                <div class="inline-block px-4 py-1 rounded-full border border-cinePrimary/30 text-cineAccent text-xs font-bold uppercase tracking-widest bg-cinePrimary/5" data-key="hero_badge">
+                    Pre-release
+                </div>
+                <h1 class="text-6xl md:text-8xl font-black leading-none tracking-tighter" data-key="hero_title">
+                    Vivez le <br><span class="text-cinePrimary">Cinéma.</span>
+                </h1>
+                <p class="text-cineMuted text-lg md:text-xl max-w-lg mx-auto md:mx-0" data-key="hero_subtitle">
+                    Votez, notez et retrouvez vous autour du grand écran.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+                    <button class="bg-cinePrimary text-cineBg px-10 py-4 rounded-xl font-black hover:scale-105 transition shadow-lg shadow-cinePrimary/20" data-key="hero_cta_primary">Essayer la démo</button>
+                    <a href="#preview" class="px-10 py-4 rounded-xl font-bold border border-cineMuted/30 hover:bg-cineCard transition text-center" data-key="hero_cta_secondary">En savoir plus</a>
+                </div>
+            </div>
+
+            <div class="md:w-1/2 mt-16 md:mt-0 flex justify-center">
+                <div class="relative group">
+                    <div class="absolute -inset-1 bg-cinePrimary rounded-2xl blur opacity-20 group-hover:opacity-40 transition"></div>
+                    <img src="home.png" 
+                         alt="Cineclub Hero" 
+                         class="rounded-2xl shadow-2xl border border-cineMuted/20 relative w-full max-w-2xl transform group-hover:-rotate-1 transition duration-500">
+                </div>
+            </div>
+        </div>
+
+        <div class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce text-cineMuted">
+            <i class="fas fa-chevron-down text-2xl"></i>
+        </div>
+    </header>
+
+    <section id="preview" class="bg-cineCard/30 py-20">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="text-3xl font-bold mb-12 text-center" data-key="preview_title">Pourquoi utiliser <span class="text-cinePrimary">Cineclub</span> ?</h2>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="glass p-8 rounded-2xl space-y-4">
+                    <div class="text-cineAccent text-3xl"><i class="fas fa-calendar-alt"></i></div>
+                    <h3 class="text-xl font-bold" data-key="feature_sessions_title">Prochaines Séances</h3>
+                    <p class="text-cineMuted" data-key="feature_sessions_text">Ne manquez plus aucun film. Créez et inscrivez vous à des séances de visionnage. Plus la peine de passer des heures à planifier une séances</p>
+                </div>
+                <div class="glass p-8 rounded-2xl space-y-4">
+                    <div class="text-cineAccent text-3xl"><i class="fas fa-star"></i></div>
+                    <h3 class="text-xl font-bold" data-key="feature_reviews_title">Critiques & Avis</h3>
+                    <p class="text-cineMuted" data-key="feature_reviews_text">Notez vos films sur 10. Partagez vos ressentis, du "Pure Masterclass" aux avis les plus tranchés.</p>
+                </div>
+                <div class="glass p-8 rounded-2xl space-y-4">
+                    <div class="text-cineAccent text-3xl"><i class="fas fa-user-shield"></i></div>
+                    <h3 class="text-xl font-bold" data-key="feature_admin_title">Gestion Admin</h3>
+                    <p class="text-cineMuted" data-key="feature_admin_text">Un panneau d'administration complet pour gérer les utilisateurs actifs et maintenir la sécurité de votre app.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-cineCard/30">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="text-4xl font-bold mb-12 text-center" data-key="oss_title">Open Source & <span class="text-cinePrimary">Self-Hosted</span></h2>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="glass p-8 rounded-2xl space-y-4">
+                    <div class="text-cineAccent text-4xl"><i class="fas fa-code"></i></div>
+                    <h3 class="text-2xl font-bold" data-key="oss_open_title">Code open source</h3>
+                    <p class="text-cineMuted" data-key="oss_open_text">Code transparent et modifiable. Participez au développement, proposez des améliorations, auditez la sécurité.</p>
+                </div>
+                <div class="glass p-8 rounded-2xl space-y-4">
+                    <div class="text-cineAccent text-4xl"><i class="fas fa-server"></i></div>
+                    <h3 class="text-2xl font-bold" data-key="oss_host_title">Hébergement Personnel</h3>
+                    <p class="text-cineMuted" data-key="oss_host_text">Hébergez Cineclub sur votre propre serveur. Liberté totale, pas de dépendance envers un tiers, respect de votre vie privée.</p>
+                </div>
+                <div class="glass p-8 rounded-2xl space-y-4">
+                    <div class="text-cineAccent text-4xl"><i class="fas fa-lock"></i></div>
+                    <h3 class="text-2xl font-bold" data-key="oss_data_title">Vos Données</h3>
+                    <p class="text-cineMuted" data-key="oss_data_text">Contrôle complet de vos données. Pas de collecte, pas d'analyse comportementale, juste vos films et vos ami(e)s.</p>
+                </div>
+                <div class="glass p-8 rounded-2xl space-y-4">
+                    <div class="text-cineAccent text-4xl"><i class="fas fa-users"></i></div>
+                    <h3 class="text-2xl font-bold" data-key="oss_community_title">Communauté Active</h3>
+                    <p class="text-cineMuted" data-key="oss_community_text">Rejoignez une communauté de contributeurs passionnés. Partagez idées, bogues et améliorations.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="features" class="py-20 max-w-7xl mx-auto px-6">
+        <div class="flex flex-col md:flex-row gap-12 items-start">
+            <div class="md:w-1/2 order-2 md:order-1">
+                <div class="bg-cineCard p-6 rounded-xl border border-cineMuted/30 shadow-2xl">
+                    <div class="flex gap-4 mb-6">
+                        <div class="w-32 h-48 bg-gradient-to-br from-blue-900 to-cyan-600 rounded shadow-lg flex-shrink-0 flex items-center justify-center">
+                            <img src="avatar.webp" alt="Avatar movie poster" class="w-full h-full object-cover rounded">
+                        </div>
+                        <div class="flex-1 space-y-3 py-2">
+                            <h3 class="text-2xl font-bold text-white" data-key="movie_title">Avatar</h3>
+                            <div class="text-sm text-cineMuted italic" data-key="movie_tagline">"Entrez dans le monde de Pandora"</div>
+                            <div class="flex gap-4 items-center text-xs text-cineMuted">
+                                <span class="flex items-center gap-2"><i class="fas fa-calendar text-cineAccent"></i>16 décembre 2009</span>
+                                <span class="flex items-center gap-2"><i class="fas fa-clock text-cineAccent"></i>2h 46min</span>
+                            </div>
+                            <div class="flex gap-2 flex-wrap">
+                                <span class="bg-cinePrimary/20 px-3 py-1 text-cineAccent rounded-full text-sm border border-cinePrimary">Action</span>
+                                <span class="bg-cinePrimary/20 px-3 py-1 text-cineAccent rounded-full text-sm border border-cinePrimary">Aventure</span>
+                                <span class="bg-cinePrimary/20 px-3 py-1 text-cineAccent rounded-full text-sm border border-cinePrimary">Science-Fiction</span>
+                            </div>
+                            <div class="flex items-center gap-2 pt-2">
+                                <i class="fas fa-star text-cineAccent"></i>
+                                <span class="font-bold text-cineAccent">7.6/10</span>
+                                <span class="text-xs text-cineMuted">(33429 votes TMDB)</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="space-y-3 mt-6 pt-6 border-t border-cineMuted/20">
+                        <div class="text-xs font-bold text-cineAccent uppercase" data-key="movie_synopsis_label">Synopsis</div>
+                        <p class="text-sm text-cineMuted leading-relaxed" data-key="movie_synopsis_text">Un marine paralysé envoyé sur la lune Pandora pour une mission unique, est tiraillé entre suivre ses ordres et protéger le monde qu'il considère comme son nouveau foyer.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="md:w-1/2 space-y-6 order-1 md:order-2">
+                <h2 class="text-4xl font-bold" data-key="movie_section_title">Explorez chaque film en <span class="text-cinePrimary">détail</span></h2>
+                <p class="text-cineMuted text-lg" data-key="movie_section_text">
+                    Consultez les détails complets de vos films favoris : synopsis, dates de sortie, durée, genres et notes TMDB intégrées. Créez votre propre salle de visionnage et partagez vos avis en un clic.
+                </p>
+                <ul class="space-y-3">
+                    <li class="flex items-center gap-3 text-cineAccent"><i class="fas fa-check-circle"></i> <span data-key="movie_bullet_1">Affiche et détails du film</span></li>
+                    <li class="flex items-center gap-3 text-cineAccent"><i class="fas fa-check-circle"></i> <span data-key="movie_bullet_2">Synopsis et informations complètes</span></li>
+                    <li class="flex items-center gap-3 text-cineAccent"><i class="fas fa-check-circle"></i> <span data-key="movie_bullet_3">Création de salles de visionnage</span></li>
+                    <li class="flex items-center gap-3 text-cineAccent"><i class="fas fa-check-circle"></i> <span data-key="movie_bullet_4">Avis et notation personnalisées</span></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 max-w-7xl mx-auto px-6">
+        <div class="flex flex-col md:flex-row gap-12 items-center">
+            <div class="md:w-1/2 space-y-6 order-1 md:order-1">
+                <h2 class="text-4xl font-bold" data-key="security_title">Sécurité & <span class="text-cinePrimary">Administration</span></h2>
+                <p class="text-cineMuted text-lg" data-key="security_text">
+                    Cineclub bénéficie de systèmes de sécurité modernes et d'un panneau d'administration puissant pour gérer votre communauté en toute confiance. Controlez qui peut avoir accès à votre application.
+                </p>
+                <ul class="space-y-3">
+                    <li class="flex items-center gap-3 text-cineAccent"><i class="fas fa-shield-alt"></i> <span data-key="security_bullet_1">Authentification sécurisée & chiffrement</span></li>
+                    <li class="flex items-center gap-3 text-cineAccent"><i class="fas fa-cogs"></i> <span data-key="security_bullet_2">Dashboard d'administration intuitif</span></li>
+                    <li class="flex items-center gap-3 text-cineAccent"><i class="fas fa-user-check"></i> <span data-key="security_bullet_3">Gestion granulaire des utilisateurs</span></li>
+                    <li class="flex items-center gap-3 text-cineAccent"><i class="fas fa-history"></i> <span data-key="security_bullet_4">Audit complet et logs détaillés</span></li>
+                </ul>
+            </div>
+            <div class="md:w-1/2 order-2 md:order-2">
+                <div class="relative group">
+                    <div class="absolute -inset-1 bg-cinePrimary rounded-2xl blur opacity-20 group-hover:opacity-40 transition"></div>
+                    <div class="bg-cineCard p-8 rounded-2xl border border-cineMuted/20 shadow-2xl relative">
+                        <h3 class="text-xl font-bold mb-6 text-white" data-key="admin_panel_title">Paramètres Admin</h3>
+                        <div class="text-cineAccent text-sm uppercase tracking-widest font-bold mb-4" data-key="admin_pending_title">Utilisateurs en attente</div>
+                        <div class="glass p-4 rounded-lg mb-3">
+                            <div class="flex items-start justify-between gap-3">
+                                <div class="flex-1">
+                                    <div class="font-bold text-white mb-1" data-key="admin_user_generic">Utilisateur 1</div>
+                                    <div class="text-xs text-cineMuted mb-2">user1@example.com</div>
+                                    <div class="flex gap-2">
+                                        <span class="text-xs px-2 py-1 bg-cinePrimary/20 text-cineAccent rounded" data-key="admin_role_user">Utilisateur</span>
+                                        <span class="text-xs text-cineMuted" data-key="admin_joined_1">Inscrit à 11/03/2026</span>
+                                    </div>
+                                </div>
+                                <button class="bg-green-600 hover:bg-green-700 text-white px-3 py-2 rounded text-xs font-bold transition muted" data-key="admin_approve">Approuver</button>
+                                <button class="bg-red-600 hover:bg-red-700 text-white px-3 py-2 rounded text-xs font-bold transition" data-key="admin_delete">Supprimer</button>
+                            </div>
+                        </div>
+
+                        <div class="text-cineAccent text-sm uppercase tracking-widest font-bold mb-4" data-key="admin_active_title">Utilisateurs actifs (2)</div>
+                        
+                        <!-- Utilisateur 1 -->
+                        <div class="glass p-4 rounded-lg mb-3">
+                            <div class="flex items-start justify-between gap-3">
+                                <div class="flex-1">
+                                    <div class="font-bold text-white mb-1" data-key="admin_user_generic">Utilisateur 1</div>
+                                    <div class="text-xs text-cineMuted mb-2">user1@example.com</div>
+                                    <div class="flex gap-2">
+                                        <span class="text-xs px-2 py-1 bg-cinePrimary/20 text-cineAccent rounded" data-key="admin_role_user">Utilisateur</span>
+                                        <span class="text-xs text-cineMuted" data-key="admin_joined_1">Inscrit à 11/03/2026</span>
+                                    </div>
+                                </div>
+                                <button class="bg-red-600 hover:bg-red-700 text-white px-3 py-2 rounded text-xs font-bold transition" data-key="admin_delete">Supprimer</button>
+                            </div>
+                        </div>
+
+                        <!-- Utilisateur 4 -->
+                        <div class="glass p-4 rounded-lg">
+                            <div class="flex items-start justify-between gap-3">
+                                <div class="flex-1">
+                                    <div class="font-bold text-white mb-1" data-key="admin_user_admin">Administrateur</div>
+                                    <div class="text-xs text-cineMuted mb-2">admin@example.com</div>
+                                    <div class="flex gap-2">
+                                        <span class="text-xs px-2 py-1 bg-cinePrimary/50 text-cineAccent rounded" data-key="admin_role_admin">Admin</span>
+                                        <span class="text-xs text-cineMuted" data-key="admin_joined_2">Inscrit à 07/02/2026</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-20 max-w-4xl mx-auto px-6">
+        <div class="border-l-2 border-cinePrimary/40 pl-6">
+            <div class="text-xs uppercase tracking-widest text-cineAccent font-bold mb-4" data-key="about_label">A propos</div>
+            <div class="flex items-center gap-6 mb-6">
+                <img src="pfp.jpg" alt="Photo de profil" class="w-20 h-20 rounded-full object-cover border-2 border-cinePrimary/40 shadow-lg">
+                <h2 class="text-4xl font-bold" data-key="about_title">Qui suis-je ?</h2>
+            </div>
+            <p class="text-cineMuted leading-relaxed mb-10" data-key="about_text">
+                Cette application a été créée par fmaxv60. Passionné par le développement et le self-hosting, j'ai conçu cet outil pour permettre à 
+                mes amis et moi de noter et regarder des films ensemble. Je développe ce projet en solo et, comme je cherche toujours à m'améliorer, 
+                je vous encourage vivement à contribuer pour faire de Cineclub une application encore plus performante. N'hésitez pas à me contacter 
+                sur GitHub ou à rejoindre la communauté pour partager vos idées et suggestions !
+            </p>
+        </div>
+    </section>
+
+    <section class="py-20 text-center px-6">
+        <div class="max-w-4xl mx-auto bg-gradient-to-br from-cineCard to-cineBg p-12 rounded-3xl border border-cinePrimary/20">
+            <h2 class="text-3xl md:text-5xl font-bold mb-6" data-key="cta_title">Prêt à rejoindre le Cineclub ?</h2>
+            <p class="text-cineMuted mb-10 text-lg" data-key="cta_text">Rejoignez nous pour une expérience cinéma unique.</p>
+            <a href="https://github.com/Fmaxv60/Cineclub" target="_blank" class="inline-block bg-cinePrimary hover:bg-cineAccent text-cineBg px-10 py-4 rounded-full font-extrabold text-lg transition shadow-lg" data-key="cta_button">
+                Découvrir sur GitHub
+            </a>
+        </div>
+    </section>
+
+    <footer class="py-12 border-t border-cineCard text-center text-cineMuted">
+        <p data-key="footer_text">&copy; 2026 Cineclub. Développé avec passion pour le 7ème art.</p>
+    </footer>
+
+    <script>
+        const translations = {
+            fr: {
+                page_title: "Cineclub | Votre passion cinéma",
+                nav_preview: "Aperçu",
+                nav_features: "Fonctionnalités",
+                nav_about: "À propos",
+                nav_cta: "Essayer la démo",
+                hero_badge: "Pre-release",
+                hero_title: "Vivez le <br><span class='text-cinePrimary'>Cinéma.</span>",
+                hero_subtitle: "Votez, notez et retrouvez vous autour du grand écran.",
+                hero_cta_primary: "Essayer la démo",
+                hero_cta_secondary: "En savoir plus",
+                preview_title: "Pourquoi utiliser <span class='text-cinePrimary'>Cineclub</span> ?",
+                feature_sessions_title: "Prochaines Séances",
+                feature_sessions_text: "Ne manquez plus aucun film. Créez et inscrivez vous à des séances de visionnage. Plus la peine de passer des heures à planifier une séances",
+                feature_reviews_title: "Critiques & Avis",
+                feature_reviews_text: "Notez vos films sur 10. Partagez vos ressentis, du \"Pure Masterclass\" aux avis les plus tranchés.",
+                feature_admin_title: "Gestion Admin",
+                feature_admin_text: "Un panneau d'administration complet pour gérer les utilisateurs actifs et maintenir la sécurité de votre app.",
+                oss_title: "Open Source & <span class='text-cinePrimary'>Self-Hosted</span>",
+                oss_open_title: "Code Open Source",
+                oss_open_text: "Code transparent et modifiable. Participez au développement, proposez des améliorations, auditez la sécurité.",
+                oss_host_title: "Hébergement Personnel",
+                oss_host_text: "Hébergez Cineclub sur votre propre serveur. Liberté totale, pas de dépendance envers un tiers, respect de votre vie privée.",
+                oss_data_title: "Vos Données",
+                oss_data_text: "Contrôle complet de vos données. Pas de collecte, pas d'analyse comportementale, juste vos films et vos ami(e)s.",
+                oss_community_title: "Communauté Active",
+                oss_community_text: "Rejoignez une communauté de contributeurs passionnés. Partagez idées, bogues et améliorations.",
+                movie_title: "Avatar",
+                movie_tagline: "\"Entrez dans le monde de Pandora\"",
+                movie_synopsis_label: "Synopsis",
+                movie_synopsis_text: "Un marine paralysé envoyé sur la lune Pandora pour une mission unique, est tiraillé entre suivre ses ordres et protéger le monde qu'il considère comme son nouveau foyer.",
+                movie_section_title: "Explorez chaque film en <span class='text-cinePrimary'>détail</span>",
+                movie_section_text: "Consultez les détails complets de vos films favoris : synopsis, dates de sortie, durée, genres et notes TMDB intégrées. Créez votre propre salle de visionnage et partagez vos avis en un clic.",
+                movie_bullet_1: "Affiche et détails du film",
+                movie_bullet_2: "Synopsis et informations complètes",
+                movie_bullet_3: "Création de salles de visionnage",
+                movie_bullet_4: "Avis et notation personnalisées",
+                security_title: "Sécurité & <span class='text-cinePrimary'>Administration</span>",
+                security_text: "Cineclub bénéficie de systèmes de sécurité modernes et d'un panneau d'administration puissant pour gérer votre communauté en toute confiance. Controlez qui peut avoir accès à votre application.",
+                security_bullet_1: "Authentification sécurisée & chiffrement",
+                security_bullet_2: "Dashboard d'administration intuitif",
+                security_bullet_3: "Gestion granulaire des utilisateurs",
+                security_bullet_4: "Audit complet et logs détaillés",
+                admin_panel_title: "Paramètres Admin",
+                admin_pending_title: "Utilisateurs en attente",
+                admin_active_title: "Utilisateurs actifs (2)",
+                admin_user_generic: "Utilisateur 1",
+                admin_user_admin: "Administrateur",
+                admin_role_user: "Utilisateur",
+                admin_role_admin: "Admin",
+                admin_joined_1: "Inscrit à 11/03/2026",
+                admin_joined_2: "Inscrit à 07/02/2026",
+                admin_approve: "Approuver",
+                admin_delete: "Supprimer",
+                about_label: "A propos",
+                about_title: "Qui suis-je ?",
+                about_text: "Cette application a été créée par fmaxv60. Passionné par le développement et le self-hosting, j'ai conçu cet outil pour permettre à mes amis et moi de noter et regarder des films ensemble. Je développe ce projet en solo et, comme je cherche toujours à m'améliorer, je vous encourage vivement à contribuer pour faire de Cineclub une application encore plus performante. N'hésitez pas à me contacter sur GitHub ou à rejoindre la communauté pour partager vos idées et suggestions !",
+                cta_title: "Prêt à rejoindre le Cineclub ?",
+                cta_text: "Rejoignez nous pour une expérience cinéma unique.",
+                cta_button: "Découvrir sur GitHub",
+                footer_text: "&copy; 2026 Cineclub. Développé avec passion pour le 7ème art."
+            },
+            en: {
+                page_title: "Cineclub | Your cinema passion",
+                nav_preview: "Preview",
+                nav_features: "Features",
+                nav_about: "About",
+                nav_cta: "Try the demo",
+                hero_badge: "Pre-release",
+                hero_title: "Live the <br><span class='text-cinePrimary'>Cinema.</span>",
+                hero_subtitle: "Vote, rate, and gather around the big screen.",
+                hero_cta_primary: "Try the demo",
+                hero_cta_secondary: "Learn more",
+                preview_title: "Why use <span class='text-cinePrimary'>Cineclub</span>?",
+                feature_sessions_title: "Upcoming Sessions",
+                feature_sessions_text: "Never miss a movie. Create and join watch sessions. No more hours spent planning.",
+                feature_reviews_title: "Reviews & Ratings",
+                feature_reviews_text: "Rate films out of 10. Share your thoughts, from pure hype to sharp takes.",
+                feature_admin_title: "Admin Panel",
+                feature_admin_text: "A complete admin panel to manage active users and keep your app secure.",
+                oss_title: "Open Source & <span class='text-cinePrimary'>Self-Hosted</span>",
+                oss_open_title: "Open Code",
+                oss_open_text: "Transparent and modifiable code. Contribute, propose improvements, and audit security.",
+                oss_host_title: "Self Hosting",
+                oss_host_text: "Host Cineclub on your own server. Full freedom, no third-party dependency, privacy first.",
+                oss_data_title: "Your Data",
+                oss_data_text: "Full control of your data. No tracking, no behavioral analysis, just your movies and friends.",
+                oss_community_title: "Active Community",
+                oss_community_text: "Join a community of passionate contributors. Share ideas, bugs, and improvements.",
+                movie_title: "Avatar",
+                movie_tagline: "\"Enter the world of Pandora\"",
+                movie_synopsis_label: "Synopsis",
+                movie_synopsis_text: "A paraplegic Marine dispatched to the moon Pandora on a unique mission is torn between following orders and protecting the world he comes to see as his home.",
+                movie_section_title: "Explore every film in <span class='text-cinePrimary'>detail</span>",
+                movie_section_text: "See full details for your favorite movies: synopsis, release date, runtime, genres, and TMDB ratings. Create your own watch room and share reviews in one click.",
+                movie_bullet_1: "Poster and film details",
+                movie_bullet_2: "Synopsis and full information",
+                movie_bullet_3: "Create watch rooms",
+                movie_bullet_4: "Personalized reviews and ratings",
+                security_title: "Security & <span class='text-cinePrimary'>Administration</span>",
+                security_text: "Cineclub uses modern security systems and a powerful admin panel to manage your community with confidence. Control who can access your app.",
+                security_bullet_1: "Secure authentication & encryption",
+                security_bullet_2: "Intuitive admin dashboard",
+                security_bullet_3: "Granular user management",
+                security_bullet_4: "Full audit and detailed logs",
+                admin_panel_title: "Admin Settings",
+                admin_pending_title: "Pending users",
+                admin_active_title: "Active users (2)",
+                admin_user_generic: "User 1",
+                admin_user_admin: "Administrator",
+                admin_role_user: "User",
+                admin_role_admin: "Admin",
+                admin_joined_1: "Joined 03/11/2026",
+                admin_joined_2: "Joined 02/07/2026",
+                admin_approve: "Approve",
+                admin_delete: "Delete",
+                about_label: "About",
+                about_title: "Who am I?",
+                about_text: "This app was created by fmaxv60. Passionate about development and self-hosting, I built this tool so my friends and I can rate and watch movies together. I develop this project solo and, as I keep improving, I encourage you to contribute to make Cineclub even better. Feel free to contact me on GitHub or join the community to share your ideas and suggestions!",
+                cta_title: "Ready to join Cineclub?",
+                cta_text: "Join us for a unique cinema experience.",
+                cta_button: "Discover on GitHub",
+                footer_text: "&copy; 2026 Cineclub. Built with passion for the 7th art."
+            }
+        };
+
+        function applyLanguage(lang) {
+            const selectedLang = translations[lang] ? lang : 'en';
+            const strings = translations[selectedLang];
+
+            document.querySelectorAll('[data-key]').forEach(el => {
+                const key = el.getAttribute('data-key');
+                if (strings[key]) {
+                    el.innerHTML = strings[key];
+                }
+            });
+
+            document.title = strings.page_title || document.title;
+            document.documentElement.lang = selectedLang;
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const userLang = navigator.language || navigator.userLanguage;
+            const shortLang = userLang ? userLang.split('-')[0] : 'en';
+            applyLanguage(shortLang);
+        });
+    </script>
+
+</body>
+</html>
