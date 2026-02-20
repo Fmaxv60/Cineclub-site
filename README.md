@@ -16,8 +16,14 @@ Cineclub
   &nbsp;
   <a href="https://github.com/Fmaxv60/Cineclub"><img alt="GitHub Stars" src="https://img.shields.io/github/stars/Fmaxv60/Cineclub"></a>
   &nbsp;
-  <a href="https://hub.docker.com/r/fmaxv60/Cineclub"><img alt="Docker" src="https://img.shields.io/badge/Docker%20Hub-Fmaxv60%2FCineclub-2496ED?logo=docker&logoColor=white"></a>
+  <a href="https://hub.docker.com/r/fmaxv60/cineclub">
+  <img alt="Docker Pulls"
+       src="https://img.shields.io/docker/pulls/fmaxv60/cineclub">
+  </a>
   &nbsp;
+  <img alt="License"
+     src="https://img.shields.io/github/license/Fmaxv60/Cineclub">
+     &nbsp;
 </p>
 
 ---
