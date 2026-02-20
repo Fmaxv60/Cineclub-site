@@ -4,6 +4,11 @@ Cineclub is a social movie app to vote, rate, and watch films together. Create s
 
 <img src="home.png">
 
+<p align="center">
+  <a href="https://github.com/Fmaxv60/Cineclub/actions"><img alt="GitHub Build Status" src="https://img.shields.io/github/checks-status/Fmaxv60/Cineclub/main"></a>
+  &nbsp;
+</p>
+
 ---
 
 ## Highlights
