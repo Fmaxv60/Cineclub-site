@@ -5,11 +5,14 @@ Cineclub is a social movie app to vote, rate, and watch films together. Create s
 <img src="home.png">
 
 <p align="center">
-  <a href="https://github.com/Fmaxv60/Cineclub/actions"><img alt="GitHub Build Status" src="https://img.shields.io/github/actions/workflow/status/Fmaxv60/Cineclub/on_main_push.yml/main"></a>
+  <a href="https://github.com/Fmaxv60/Cineclub/actions">
+  <img alt="GitHub Build Status"
+       src="https://github.com/Fmaxv60/Cineclub/actions/workflows/on_main_push.yml/badge.svg">
+  </a>
   &nbsp;
   <a href="https://github.com/Fmaxv60/Cineclub"><img alt="GitHub Stars" src="https://img.shields.io/github/stars/Fmaxv60/Cineclub"></a>
   &nbsp;
-  <a href="https://hub.docker.com/r/fmaxv60/Cineclub"><img alt="Docker Hub" src="https://img.shields.io/badge/Docker-Hub-blue?logo=docker"></a>
+  <a href="https://hub.docker.com/r/fmaxv60/Cineclub"><img alt="Docker" src="https://img.shields.io/badge/Docker%20Hub-Fmaxv60%2FCineclub-2496ED?logo=docker&logoColor=white"></a>
   &nbsp;
 </p>
 
