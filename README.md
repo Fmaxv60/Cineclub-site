@@ -30,3 +30,4 @@ Cineclub is a community-driven project. Ideas, bug reports, and contributions ar
 
 ## Contact
 Reach out on GitHub: https://github.com/Fmaxv60/Cineclub
+
