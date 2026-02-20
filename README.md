@@ -2,6 +2,10 @@
 
 Cineclub is a social movie app to vote, rate, and watch films together. Create screening rooms, share reviews, and keep the community safe with a powerful admin panel. Cineclub is open source and designed to be self-hosted, so you stay in control of your data.
 
+<img src="home.png">
+
+---
+
 ## Highlights
 - Movie details with synopsis, runtime, genres, and TMDB ratings
 - Watch rooms to plan sessions with friends
